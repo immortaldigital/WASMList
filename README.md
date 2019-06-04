@@ -134,7 +134,12 @@ So if you wanted to allocate 3 then 4 then 3 you would get this:
 3 0 0 0 4 0 0 0 0 3 0 0 0
 Then you delete the 4:
 3 0 0 0 0 0 0 0 0 3 0 0 0
-Then to allocate 2, it gets to the first 3, jumps to position 4, scans position 5 (2 streak) and returns 6 - 2
+Then to allocate 2, it gets to the first 3, jumps to position 4, scans position 5 (2 streak)
 3 0 0 0 2 0 0 0 0 3 0 0 0 
 You could then allocate a 1 after the 2, but any larger number would have to go after
 ```
+
+# Conclusion
+I had a lot of fun making this project. Assembly is even more different then I expected it to be but that's the enjoyable part, learning new things. Next steps are coding a neural network and maybe making my own programming language/compiler :D
+
+Also check out [WebAssembly Studio](https://webassembly.studio/), it was the best option I found to quickly get started with .wat to .wasm and executing it.
