@@ -5,9 +5,10 @@ I was interested to learn some basic assembly (not having any previous experienc
 What started out as some basic arithmetic functions quickly turned into creating complete data structures and memory managment (didnt have any experience with that before either).
 While I have no idea if I followed proper convention with memory managment, I did what I needed to make it work using what knowledge I had.
 
-This is how the structures are laid out in memory. This isnt actually defined anywhere in the program, it is implicitly assumed by all functions that use these objects. 
 
 # Structures
+This is how the structures are laid out in memory. This isnt actually defined anywhere in the program, it is implicitly assumed by all functions that use these objects.
+```
 class Node
   i32 next;
   i32 prev;
@@ -17,8 +18,10 @@ class List
   i32 head;
   i32 tail;
   i32 temp;
- 
-# Methods
+```
+So really a node object is just 3 integers. The first two contain the addresses of the previous and next nodes and the third contains the data it holds. When you call any of the node functions and give it the address of the first integer, it will expect the other two to follow
+
+# Functions
 This is the pseudo code I wrote out when planning this (after a basic introduction to WASM)
 ```
 allocate(i32) := //finds first contiguous addresses of length i32*4(after point 256)  (allocates i32 integers)
@@ -105,3 +108,12 @@ Then to allocate 2, it gets to the first 3, jumps to position 4, scans position 
 3 0 0 0 2 0 0 0 0 3 0 0 0 
 You could then allocate a 1 after the 2, but any larger number would have to go after
 ```
+
+
+# Todo
+* Add deallocation
+* Add functions nodeDelete, listDelete
+* Add following functionality
+ + Sorting
+ + Removing items
+ + Iterating through list
