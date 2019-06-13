@@ -1,4 +1,4 @@
-# WASMList
+# WasmList
 Basic LinkedList coded from scratch in WebAssembly Text.
 
 I was interested to learn some basic assembly (not having any previous experience programming in ASM before)
